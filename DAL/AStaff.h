@@ -12,9 +12,9 @@ enum class Rang {
 class AStaff : public AEntity
 {
 protected:
-	std::vector<ATask*> Tasks;
+	std::vector<int> Tasks;
 	std::string Name;
-	AReport* CurrentReport;
+	int CurrentReport;
 public:
 	Rang Position;
 	virtual std::string GetName() const = 0;
@@ -22,7 +22,7 @@ public:
 	virtual void DeleteTask(int task) = 0;
 	virtual std::vector<int> GetTasks() = 0;
 	virtual void ChangePosition(Rang NewPosition) = 0;
-	virtual AReport* GetCurrentReport() const = 0;
-	virtual void SetCurrentReport(AReport* rep) = 0;
+	virtual int GetCurrentReport() const = 0;
+	virtual void SetCurrentReport(int rep) = 0;
 };
 

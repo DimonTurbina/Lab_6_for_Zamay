@@ -14,7 +14,7 @@ class StaffModel
 {
 public:
 	StaffModel(std::vector<TaskModel*> _tasks, std::string _name, Rang CurrentPositio);
-	std::vector<int> Tasks;
+	std::vector<TaskModel*> Tasks;
 	std::string Name;
 	Rang Position;
 };

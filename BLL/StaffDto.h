@@ -15,8 +15,8 @@
 class StaffDTO : public EntityDto
 {
 public:
-	StaffDTO(std::vector<TaskDTO*> _tasks, std::string _name, Rang CurrentPositio, int id);
-	std::vector<TaskDTO*> Tasks;
+	StaffDTO(std::vector<int> _tasks, std::string _name, Rang CurrentPositio, int id);
+	std::vector<int> Tasks;
 	std::string Name;
 	Rang Position;
 };

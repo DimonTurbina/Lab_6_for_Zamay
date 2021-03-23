@@ -1,6 +1,6 @@
 #include "Report.h"
 
-Report::Report(int _id, std::string Dr, std::string _text, int Date, std::vector<ATask*> Tasks, bool _IsSprint)
+Report::Report(int _id, std::string Dr, std::string _text, int Date, std::vector<int> Tasks, bool _IsSprint)
 {
 	id = _id;
 	Druft = Dr;
@@ -40,23 +40,23 @@ void Report::SetText(std::string Text)
 	Text = Text;
 }
 
-void Report::PinTask(ATask* Task)
+void Report::PinTask(int Task)
 {
 	PinnedTask.push_back(Task);
 }
 
-std::vector<ATask*> Report::GetAllTask() const
+std::vector<int> Report::GetAllTask() const
 {
 	return PinnedTask;
 }
 
-ATask* Report::GetTask(int id) const
+int Report::GetTask(int id) const
 {
 	for (auto& task : PinnedTask) {
-		if (task->GetId())
+		if (task == id)
 			return task;
 	}
-	return nullptr;
+	return -1;
 }
 
 void Report::UpdateDay(int Date)

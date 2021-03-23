@@ -10,7 +10,7 @@ public:
 	//ReportModel(AReport* rep);
 	std::string Text;
 	std::string Druft;
-	std::vector<int> PinnedTask;
+	std::vector<TaskModel*> PinnedTask;
 	int Date;
 	int UpdateDate;
 	bool Ended;

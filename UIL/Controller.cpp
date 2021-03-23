@@ -17,10 +17,10 @@ void Controller::RemoveReport(int id)
 
 void Controller::AddReport(ReportModel* Rep, int Date)
 {
-	std::vector<TaskDTO*> t;
+	std::vector<int> t;
 	for (auto& i : Rep->PinnedTask)
 	{
-		t.emplace_back(new TaskDTO(i->Name, i->Text, i->Comments,i->CurrentState, i->id));
+		t.emplace_back(i->id);
 	}
 	auto R = new ReportDTO(CurrentReport, Rep->Druft, Rep->Text, Date, t, false);
 	Manager->AddReport(R, Date);
@@ -30,10 +30,10 @@ void Controller::AddReport(ReportModel* Rep, int Date)
 void Controller::AddSprint(ReportModel* Rep, int Date)
 {
 	if (HighPermision == true) {
-		std::vector<TaskDTO*> t;
+		std::vector<int> t;
 		for (auto& i : Rep->PinnedTask)
 		{
-			t.emplace_back(new TaskDTO(i->Name, i->Text, i->Comments, i->CurrentState, i->id));
+			t.push_back(i->id);
 		}
 		auto R = new ReportDTO(CurrentReport, Rep->Druft, Rep->Text, Date, t, true);
 		Manager->AddReport(R, Date);
@@ -54,10 +54,10 @@ void Controller::RemoveSprint(int id)
 void Controller::AddEmployee(StaffModel* _staff)
 {
 	CurrentStaff++;
-	std::vector<TaskDTO*> t;
+	std::vector<int> t;
 	for (auto& i : _staff->Tasks)
 	{
-		t.emplace_back(new TaskDTO(i->Name, i->Text, i->Comments, i->CurrentState, i->id));
+		t.push_back(i->id);
 	}
 	auto s = new StaffDTO(t, _staff->Name, _staff->Position, CurrentStaff);
 	Manager->AddEmployee(s);
@@ -74,7 +74,7 @@ StaffModel* Controller::GetEmployee(int id) const
 	std::vector<TaskModel*> t;
 	for (auto& i : Dto->Tasks)
 	{
-		t.emplace_back(new TaskModel(i->Name, i->Text, i->Comments, i->CurrentState));
+		t.emplace_back(new TaskModel(Manager->GetTask(id)->Name, Manager->GetTask(id)->Text, Manager->GetTask(id)->Comments, Manager->GetTask(id)->CurrentState));
 	}
 	auto Model = new StaffModel(t, Dto->Name, Dto->Position);
 	return Model;
@@ -86,7 +86,7 @@ ReportModel* Controller::GetReport(int id) const
 	std::vector<TaskModel*> t;
 	for (auto& i : r->PinnedTask)
 	{
-		t.emplace_back(new TaskModel(i->Name, i->Text, i->Comments, i->CurrentState));
+		t.emplace_back(new TaskModel(Manager->GetTask(id)->Name, Manager->GetTask(id)->Text, Manager->GetTask(id)->Comments, Manager->GetTask(id)->CurrentState));
 	}
 	return new ReportModel(r->Druft, r->Text, r->Date, t);
 }

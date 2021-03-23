@@ -4,13 +4,13 @@
 class Staff : public AStaff
 {
 public:
-	Staff(std::string _name, int _id, Rang CurrentPosition, AReport* CurrentReport);
+	Staff(std::string _name, int _id, Rang CurrentPosition, int CurrentReport, std::vector<int> _Tasks);
 	std::string GetName() const override;
-	void AddTask(ATask* task) override;
-	void DeleteTask(ATask* task) override;
-	std::vector<ATask*> GetTasks() override;
+	void AddTask(int task) override;
+	void DeleteTask(int task) override;
+	std::vector<int> GetTasks() override;
 	void ChangePosition(Rang NewPosition) override;
-	AReport* GetCurrentReport() const override ;
-	void SetCurrentReport(AReport* rep) override;
+	int GetCurrentReport() const override ;
+	void SetCurrentReport(int rep) override;
 };
 

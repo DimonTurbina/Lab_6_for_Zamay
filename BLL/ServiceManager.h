@@ -10,7 +10,7 @@ class ServiceManager
 	IStaffService* StaffS;
 public:
 	ServiceManager(IReportService* R, ITaskService* T, IStaffService* S) : ReportS(R), TaskS(T), StaffS(S) {};
-	std::vector<TaskDTO*> GetTasksByOwner(int owner);
+	std::vector<int> GetTasksByOwner(int owner);
 	void AddEmployee(StaffDTO* _staff);
 	void FireEmployee(StaffDTO* _staff);
 	StaffDTO* GetEmployee(int id) const;
@@ -26,6 +26,7 @@ public:
 
 	std::vector<TaskDTO*> GetUserTasks();
 	void DeleteTask(int id);
+	TaskDTO* GetTask(int id) const;
 	void CreateTask(TaskDTO* task);
 	std::string GetName(int id) const;
 	std::string GetText(int id) const;

@@ -1,6 +1,6 @@
 #include "ServiceManager.h"
 
-std::vector<TaskDTO*> ServiceManager::GetTasksByOwner(int owner)
+std::vector<int> ServiceManager::GetTasksByOwner(int owner)
 {
 	const auto s = StaffS->GetEmployee(owner);
 	return s->Tasks;
@@ -69,6 +69,11 @@ std::vector<TaskDTO*> ServiceManager::GetUserTasks()
 void ServiceManager::DeleteTask(int id)
 {
 	TaskS->DeleteTask(id);
+}
+
+TaskDTO* ServiceManager::GetTask(int id) const
+{
+	return TaskS->GetTask(id);
 }
 
 void ServiceManager::CreateTask(TaskDTO* task)

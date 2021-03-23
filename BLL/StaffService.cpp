@@ -7,7 +7,7 @@ StaffService::StaffService(Repository<AStaff>* Base)
 
 void StaffService::AddEmployee(StaffDTO* _staff)
 {
-	ReportBase->Add(new Staff(_staff->Name, _staff->GetId(), _staff->Position, nullptr));
+	ReportBase->Add(new Staff(_staff->Name, _staff->GetId(), _staff->Position, 0, _staff->Tasks));
 }
 
 void StaffService::FireEmployee(StaffDTO* _staff)
@@ -18,10 +18,10 @@ void StaffService::FireEmployee(StaffDTO* _staff)
 StaffDTO* StaffService::GetEmployee(int id) const
 {
 	auto s = ReportBase->Get(id);
-	std::vector<TaskDTO*> t;
+	std::vector<int> t;
 	for (auto& i : s->GetTasks())
 	{
-		t.emplace_back(new TaskDTO(i->GetName(), i->GetText(), i->Comments, i->GetCondition(), i->GetId()));
+		t.emplace_back(i);
 	}
 	return new StaffDTO(t, s->GetName(), s->Position, id);
 }

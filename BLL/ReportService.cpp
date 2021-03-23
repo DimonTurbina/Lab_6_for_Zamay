@@ -7,10 +7,10 @@ ReportService::ReportService(Repository<AReport>* Rep)
 
 void ReportService::AddReport(ReportDTO* Rep, int Date)
 {
-	std::vector<ATask*> t;
+	std::vector<int> t;
 	for (auto& i : Rep->PinnedTask)
 	{
-		t.emplace_back(new Task(i->Name, i->GetId(), i->Text));
+		t.push_back(i);
 	}
 	auto NewReport = new Report(Rep->GetId(), Rep->Druft, Rep->Text, Date, t, Rep->IsSprint);
 	ReportBase->Add(NewReport);
@@ -40,9 +40,9 @@ std::vector<ReportDTO*> ReportService::getAllReports() const
 
 	auto MapReport = ReportBase->GetAll();
 	for (auto& r : MapReport) {
-		std::vector<TaskDTO*> t;
+		std::vector<int> t;
 		for (auto& m : r.second->GetAllTask()) {
-			t.emplace_back(new TaskDTO(m->GetName(), m->GetText(), m->Comments, m->GetCondition(), m->GetId()));
+			t.push_back(m);
 		}
 		AllReports.emplace_back(new ReportDTO(r.first, r.second->GetDruft(), r.second->GetText(), r.second->Date, t, r.second->IsSprint));
 	}

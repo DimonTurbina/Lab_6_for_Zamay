@@ -3,14 +3,15 @@
 #include "TaskDto.h"
 #include "AReport.h"
 
+
 class ReportDTO : public EntityDto
 {
 public:
-	ReportDTO(int _id, std::string Dr, std::string _text, int Date, std::vector<TaskDTO*> Tasks, bool _IsSprint);
+	ReportDTO(int _id, std::string Dr, std::string _text, int Date, std::vector<int> Tasks, bool _IsSprint);
 	ReportDTO(AReport* rep);
 	std::string Text;
 	std::string Druft;
-	std::vector<TaskDTO*> PinnedTask;
+	std::vector<int> PinnedTask;
 	int Date;
 	int UpdateDate;
 	bool Ended;
