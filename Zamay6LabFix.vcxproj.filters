@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\DAL">
+      <UniqueIdentifier>{27884b7b-b75d-4b90-b558-1ac896918ac4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BLL">
+      <UniqueIdentifier>{060a5b47-0be9-4442-9a13-8d3a13671811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UIL">
+      <UniqueIdentifier>{e2270752-1505-49ee-a688-6eba8ec042fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DAL">
+      <UniqueIdentifier>{9c2c9183-cfb7-4935-9b5a-99bcaf0d1f45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BLL">
+      <UniqueIdentifier>{59473739-25ac-4f7f-b2b9-70c64f9de053}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UIL">
+      <UniqueIdentifier>{1bea53b5-9f74-4d91-b769-144e1865ac01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DAL\Realisation">
+      <UniqueIdentifier>{5e28f4c7-ee61-45cb-bd76-0543a0b426ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DAL\Realisation">
+      <UniqueIdentifier>{8a260e26-373a-4a0c-a4af-7e069ad4e489}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BLL\DTO">
+      <UniqueIdentifier>{10d776fd-1269-456e-812e-e7fa29eec17a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BLL\DTO">
+      <UniqueIdentifier>{10a80011-3f53-46b1-adac-2329bd0f885d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UIL\Models">
+      <UniqueIdentifier>{0017890c-ea2c-4cfe-9e31-516f460d4510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UIL\Models">
+      <UniqueIdentifier>{6f919544-0516-4473-9ac1-040f25af1511}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BLL\ReportService.cpp">
+      <Filter>Source Files\BLL</Filter>
+    </ClCompile>
+    <ClCompile Include="BLL\ServiceManager.cpp">
+      <Filter>Source Files\BLL</Filter>
+    </ClCompile>
+    <ClCompile Include="BLL\StaffService.cpp">
+      <Filter>Source Files\BLL</Filter>
+    </ClCompile>
+    <ClCompile Include="BLL\TaskService.cpp">
+      <Filter>Source Files\BLL</Filter>
+    </ClCompile>
+    <ClCompile Include="DAL\DataStruct.cpp">
+      <Filter>Source Files\DAL</Filter>
+    </ClCompile>
+    <ClCompile Include="DAL\Repository.cpp">
+      <Filter>Source Files\DAL</Filter>
+    </ClCompile>
+    <ClCompile Include="DAL\AReport.cpp">
+      <Filter>Source Files\DAL</Filter>
+    </ClCompile>
+    <ClCompile Include="DAL\AStaff.cpp">
+      <Filter>Source Files\DAL</Filter>
+    </ClCompile>
+    <ClCompile Include="DAL\ATask.cpp">
+      <Filter>Source Files\DAL</Filter>
+    </ClCompile>
+    <ClCompile Include="UIL\Controller.cpp">
+      <Filter>Source Files\UIL</Filter>
+    </ClCompile>
+    <ClCompile Include="DAL\Staff.cpp">
+      <Filter>Source Files\DAL\Realisation</Filter>
+    </ClCompile>
+    <ClCompile Include="DAL\Task.cpp">
+      <Filter>Source Files\DAL\Realisation</Filter>
+    </ClCompile>
+    <ClCompile Include="DAL\Report.cpp">
+      <Filter>Source Files\DAL\Realisation</Filter>
+    </ClCompile>
+    <ClCompile Include="BLL\ReportDTO.cpp">
+      <Filter>Source Files\BLL\DTO</Filter>
+    </ClCompile>
+    <ClCompile Include="BLL\TaskDto.cpp">
+      <Filter>Source Files\BLL\DTO</Filter>
+    </ClCompile>
+    <ClCompile Include="BLL\StaffDto.cpp">
+      <Filter>Source Files\BLL\DTO</Filter>
+    </ClCompile>
+    <ClCompile Include="BLL\EntityDto.cpp">
+      <Filter>Source Files\BLL\DTO</Filter>
+    </ClCompile>
+    <ClCompile Include="UIL\ReportModel.cpp">
+      <Filter>Source Files\UIL\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="UIL\StaffModel.cpp">
+      <Filter>Source Files\UIL\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="UIL\TaskModel.cpp">
+      <Filter>Source Files\UIL\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BLL\ReportService.h">
+      <Filter>Header Files\BLL</Filter>
+    </ClInclude>
+    <ClInclude Include="BLL\ServiceManager.h">
+      <Filter>Header Files\BLL</Filter>
+    </ClInclude>
+    <ClInclude Include="BLL\StaffService.h">
+      <Filter>Header Files\BLL</Filter>
+    </ClInclude>
+    <ClInclude Include="BLL\TaskService.h">
+      <Filter>Header Files\BLL</Filter>
+    </ClInclude>
+    <ClInclude Include="BLL\IReportService.h">
+      <Filter>Header Files\BLL</Filter>
+    </ClInclude>
+    <ClInclude Include="BLL\IStaffService.h">
+      <Filter>Header Files\BLL</Filter>
+    </ClInclude>
+    <ClInclude Include="BLL\ITaskService.h">
+      <Filter>Header Files\BLL</Filter>
+    </ClInclude>
+    <ClInclude Include="DAL\AReport.h">
+      <Filter>Header Files\DAL</Filter>
+    </ClInclude>
+    <ClInclude Include="DAL\AStaff.h">
+      <Filter>Header Files\DAL</Filter>
+    </ClInclude>
+    <ClInclude Include="DAL\ATask.h">
+      <Filter>Header Files\DAL</Filter>
+    </ClInclude>
+    <ClInclude Include="DAL\Repository.h">
+      <Filter>Header Files\DAL</Filter>
+    </ClInclude>
+    <ClInclude Include="DAL\AEntity.h">
+      <Filter>Header Files\DAL</Filter>
+    </ClInclude>
+    <ClInclude Include="UIL\Controller.h">
+      <Filter>Header Files\UIL</Filter>
+    </ClInclude>
+    <ClInclude Include="DAL\Report.h">
+      <Filter>Header Files\DAL\Realisation</Filter>
+    </ClInclude>
+    <ClInclude Include="DAL\Staff.h">
+      <Filter>Header Files\DAL\Realisation</Filter>
+    </ClInclude>
+    <ClInclude Include="DAL\Task.h">
+      <Filter>Header Files\DAL\Realisation</Filter>
+    </ClInclude>
+    <ClInclude Include="BLL\ReportDTO.h">
+      <Filter>Header Files\BLL\DTO</Filter>
+    </ClInclude>
+    <ClInclude Include="BLL\StaffDto.h">
+      <Filter>Header Files\BLL\DTO</Filter>
+    </ClInclude>
+    <ClInclude Include="BLL\TaskDto.h">
+      <Filter>Header Files\BLL\DTO</Filter>
+    </ClInclude>
+    <ClInclude Include="BLL\EntityDto.h">
+      <Filter>Header Files\BLL\DTO</Filter>
+    </ClInclude>
+    <ClInclude Include="UIL\StaffModel.h">
+      <Filter>Header Files\UIL\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="UIL\TaskModel.h">
+      <Filter>Header Files\UIL\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="UIL\ReportModel.h">
+      <Filter>Header Files\UIL\Models</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
